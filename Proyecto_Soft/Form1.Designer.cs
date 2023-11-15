@@ -35,9 +35,11 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblDistancia = new System.Windows.Forms.Label();
-            this.lblTiempo = new System.Windows.Forms.Label();
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnDesconectar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -76,9 +78,8 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(55, 181);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 20);
+            this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Tiempo Activo";
             // 
             // lblFecha
             // 
@@ -113,17 +114,6 @@
             this.lblDistancia.TabIndex = 6;
             this.lblDistancia.Text = "Ningun Parametro especificado";
             // 
-            // lblTiempo
-            // 
-            this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTiempo.Location = new System.Drawing.Point(54, 201);
-            this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(283, 25);
-            this.lblTiempo.TabIndex = 7;
-            this.lblTiempo.Text = "Ningun Parametro especificado";
-            // 
             // btnConectar
             // 
             this.btnConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,6 +124,7 @@
             this.btnConectar.TabIndex = 8;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // btnDesconectar
             // 
@@ -145,15 +136,46 @@
             this.btnDesconectar.TabIndex = 9;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnApagar.Location = new System.Drawing.Point(124, 272);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(95, 37);
+            this.btnApagar.TabIndex = 10;
+            this.btnApagar.Text = "Apagar Alarma";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(474, 69);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(139, 20);
+            this.txtUsuario.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(470, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Nombre de Usuario";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.btnConectar);
-            this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.lblDistancia);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblFecha);
@@ -177,9 +199,11 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblDistancia;
-        private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Button btnDesconectar;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label5;
     }
 }
 
